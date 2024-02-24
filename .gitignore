@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/aspnetcore,rider,visualstudio,visualstudiocode,macos,windows,linux,android,androidstudio
-# Edit at https://www.toptal.com/developers/gitignore?templates=aspnetcore,rider,visualstudio,visualstudiocode,macos,windows,linux,android,androidstudio
+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,rider,android,windows,aspnetcore,visualstudio,androidstudio,visualstudiocode,angular
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,rider,android,windows,aspnetcore,visualstudio,androidstudio,visualstudiocode,angular
 
 ### Android ###
 # Gradle files
@@ -41,6 +41,37 @@ gen-external-apklibs
 
 # Replacement of .externalNativeBuild directories introduced
 # with Android Studio 3.5.
+
+### Angular ###
+## Angular ##
+# compiled output
+dist/
+tmp/
+app/**/*.js
+app/**/*.js.map
+
+# dependencies
+node_modules/
+bower_components/
+
+# IDEs and editors
+
+# misc
+.sass-cache/
+connect.lock/
+coverage/
+libpeerconnection.log/
+npm-debug.log
+testem.log
+typings/
+.angular/
+
+# e2e
+e2e/*.js
+e2e/*.map
+
+# System Files
+.DS_Store/
 
 ### ASPNETCore ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -168,7 +199,6 @@ nCrunchTemp_*
 AutoTest.Net/
 
 # Web workbench (sass)
-.sass-cache/
 
 # Installshield output folder
 [Ee]xpress/
@@ -240,7 +270,6 @@ ClientBin/
 *.jfm
 *.pfx
 *.publishsettings
-node_modules/
 orleans.codegen.cs
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
@@ -838,4 +867,4 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/aspnetcore,rider,visualstudio,visualstudiocode,macos,windows,linux,android,androidstudio
+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,rider,android,windows,aspnetcore,visualstudio,androidstudio,visualstudiocode,angular
