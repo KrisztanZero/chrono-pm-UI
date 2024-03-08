@@ -1,0 +1,35 @@
+.issue-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.issue-card-header {
+    margin-bottom: 10px;
+}
+
+.issue-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.issue-info {
+    font-size: 16px;
+}
+
+.issue-card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailed-info-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.detailed-info-link:hover {
+    text-decoration: underline;
+}

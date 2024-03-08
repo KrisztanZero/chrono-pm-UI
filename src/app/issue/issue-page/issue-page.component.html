@@ -1,0 +1,13 @@
+<section class="filter-section">
+  <form>
+    <input type="text" placeholder="Filter by issue name" #filter />
+    <button type="button" (click)="filterResults(filter.value)">Search</button>
+  </form>
+</section>
+<section class="issue-section">
+  @for (issue of filteredIssues; track issue.id) {
+  <div>
+    <app-issue-card [issue]="issue"></app-issue-card>
+  </div>
+  }
+</section>

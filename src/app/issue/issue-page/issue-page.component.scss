@@ -1,0 +1,42 @@
+.filter-section {
+  margin-bottom: 2rem;
+}
+
+.filter-section form {
+  display: flex;
+  align-items: center;
+}
+
+.filter-section input {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  width: 18rem;
+}
+
+.filter-section button {
+  padding: 1rem 2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.issue-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.issue-section app-issue-card h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.issue-section app-issue-card p {
+  font-size: 0.875rem;
+  color: #666;
+}

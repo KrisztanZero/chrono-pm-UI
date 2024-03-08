@@ -1,0 +1,12 @@
+<section class="issue-card">
+  <div class="issue-card-header">
+    <h2 class="issue-title">{{ issue.title }}</h2>
+    <p class="issue-info">{{ issue.project }}, {{ issue.type }}</p>
+  </div>
+  <div class="issue-card-body">
+    <p class="issue-info">{{ issue.createdAt }}</p>
+    <a [routerLink]="['/issue-details', issue.id]" class="detailed-info-link"
+      >Detailed Information</a
+    >
+  </div>
+</section>

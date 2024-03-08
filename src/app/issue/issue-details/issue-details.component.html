@@ -1,0 +1,25 @@
+<article class="issue-details">
+  <section class="issue-header">
+    <h2>{{ issue?.title }}, {{ issue?.id }}</h2>
+    <p>{{ issue?.project }}, {{ issue?.type }}</p>
+  </section>
+  <section class="issue-body">
+    <h2>About this issue</h2>
+    <ul>
+      <li><strong>Priority:</strong> {{ issue?.priority }}</li>
+      <li><strong>Summary:</strong> {{ issue?.summary }}</li>
+      <li><strong>Description:</strong> {{ issue?.description }}</li>
+      <li><strong>Due Date:</strong> {{ issue?.dueDateTime }}</li>
+      <li><strong>Created:</strong> {{ issue?.createdAt }}</li>
+      <li>
+        <strong>Original Estimate Time:</strong> {{ issue?.originalEstimate }}
+      </li>
+      <li>
+        <strong>Remaining Estimate Time:</strong> {{ issue?.remainingEstimate }}
+      </li>
+      <li><strong>Author:</strong> {{ issue?.authorId }}</li>
+      <li><strong>Assigned Users:</strong> {{ issue?.assigneeIds }}</li>
+      <li><strong>Comments:</strong> {{ issue?.commentIds }}</li>
+    </ul>
+  </section>
+</article>
