@@ -1,4 +1,4 @@
-export interface Issue {
+export interface IIssue {
   id: string;
   title: string;
   project: string;

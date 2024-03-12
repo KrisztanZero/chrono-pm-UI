@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Issue } from '../../interface/issue';
+import { IIssue } from '../../interface/issue';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -10,5 +10,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './issue-card.component.scss',
 })
 export class IssueCardComponent {
-  @Input() issue!: Issue;
+  @Input() issue!: IIssue;
 }

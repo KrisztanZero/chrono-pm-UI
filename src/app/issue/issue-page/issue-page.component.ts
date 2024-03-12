@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { IssueCardComponent } from '../issue-card/issue-card.component';
-import { Issue } from '../../interface/issue';
+import { IIssue } from '../../interface/issue';
 import { IssueService } from '../../service/issue.service';
 
 @Component({
@@ -11,13 +11,13 @@ import { IssueService } from '../../service/issue.service';
   styleUrl: './issue-page.component.scss',
 })
 export class IssuePageComponent {
-  issues: Issue[] = [];
-  filteredIssues: Issue[] = [];
+  issues: IIssue[] = [];
+  filteredIssues: IIssue[] = [];
 
   issueService: IssueService = inject(IssueService);
 
   constructor() {
-    this.issueService.getAllIssues().then((issues: Issue[]) => {
+    this.issueService.getAllIssues().then((issues: IIssue[]) => {
       this.issues = issues;
       this.filteredIssues = issues;
     });
