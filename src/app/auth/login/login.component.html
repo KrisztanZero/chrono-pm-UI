@@ -1,30 +1,57 @@
-<section class="login-section">
-  <h2>Login</h2>
-  <form
-    [formGroup]="applyForm"
-    (submit)="submitApplication()"
-    class="login-form"
-  >
-    <div class="form-group">
-      <label for="email">Email</label>
+<h2 class="form">Login</h2>
+<div class="form">
+  <form [formGroup]="applyForm" (submit)="submitLogin()" class="login-form">
+    <mat-form-field>
+      <mat-label for="email">Email</mat-label>
       <input
         id="email"
         type="email"
+        matInput
+        [formControl]="emailFormControl"
+        placeholder="Ex. pat@example.com"
         formControlName="email"
-        class="form-control"
       />
-    </div>
-
-    <div class="form-group">
-      <label for="password">Password</label>
+      @if (emailFormControl.hasError('email') &&
+      !emailFormControl.hasError('required')) {
+      <mat-error>Please enter a valid email address</mat-error>
+      } @if (emailFormControl.hasError('required')) {
+      <mat-error>Email is <strong>required</strong></mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label for="password">Password</mat-label>
       <input
         id="password"
         type="password"
+        matInput
+        [formControl]="passwordFormControl"
+        placeholder="Ex. Abcd123!"
         formControlName="password"
-        class="form-control"
       />
-    </div>
-
-    <button type="submit" class="login-button">Login</button>
+      @if (passwordFormControl.hasError('required')) {
+      <mat-error>Password is <strong>required</strong></mat-error>
+      }
+    </mat-form-field>
+    <button
+      matSuffix
+      mat-icon-button
+      aria-label="Register"
+      type="submit"
+      [disabled]="!applyForm.valid"
+      matTooltip="Submit login"
+    >
+      <mat-icon>done</mat-icon>
+    </button>
+    @if (applyForm.valid) {
+    <button
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="resetForm()"
+      matTooltip="Reset fields"
+    >
+      <mat-icon>clear</mat-icon>
+    </button>
+    }
   </form>
-</section>
+</div>

@@ -6,7 +6,11 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   constructor() {}
 
-  submitApplication(email: string, password: string) {
+  submitLogin(email: string, password: string) {
+    console.log(`Chrono PM received: email: ${email}, password: ${password}.`);
+  }
+
+  submitRegister(email: string, password: string) {
     console.log(`Chrono PM received: email: ${email}, password: ${password}.`);
   }
 }

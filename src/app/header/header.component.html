@@ -1,14 +1,20 @@
-<header>
+<mat-toolbar>
   <img
     class="brand-logo"
     src="/assets/logo.png"
     alt="logo"
     aria-hidden="true"
+    [routerLink]="['/home']"
   />
+  <span class="spacer"></span>
   <span class="app-name">Chrono PM</span>
-  <nav>
-    <a [routerLink]="['/home']">Home</a>
-    <a [routerLink]="['/login']">Login</a>
-    <a [routerLink]="['/register']">Registration</a>
-  </nav>
-</header>
+  <span class="spacer"></span>
+  <button mat-icon-button [mat-menu-trigger-for]="menu"  aria-label="icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/home']">Home</button>
+      <button mat-menu-item [routerLink]="['/login']">Login</button>
+      <button mat-menu-item [routerLink]="['/register']">Registration</button>
+  </mat-menu>
+</mat-toolbar>

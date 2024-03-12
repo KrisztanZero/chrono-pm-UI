@@ -1,13 +1,31 @@
-<section class="filter-section">
-  <form>
-    <input type="text" placeholder="Filter by issue name" #filter />
-    <button type="button" (click)="filterResults(filter.value)">Search</button>
-  </form>
-</section>
-<section class="issue-section">
+<div class="page">
+  <mat-form-field class="search-form">
+    <mat-label>Filter by issue</mat-label>
+    <input matInput type="text" placeholder="Enter issue name" #filter />
+    <button
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="clearInput(filter)"
+      matTooltip="Reset fields"
+    >
+      <mat-icon >close</mat-icon>
+    </button>
+    <button
+      matSuffix
+      mat-icon-button
+      type="button"
+      (click)="filterResults(filter.value)"
+      matTooltip="Search"
+    >
+      <mat-icon >search</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+<mat-grid-list cols="2" rowHeight="2:1">
   @for (issue of filteredIssues; track issue.id) {
-  <div>
+  <mat-grid-tile>
     <app-issue-card [issue]="issue"></app-issue-card>
-  </div>
+  </mat-grid-tile>
   }
-</section>
+</mat-grid-list>

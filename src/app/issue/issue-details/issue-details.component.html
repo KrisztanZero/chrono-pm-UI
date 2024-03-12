@@ -1,25 +1,25 @@
-<article class="issue-details">
-  <section class="issue-header">
-    <h2>{{ issue?.title }}, {{ issue?.id }}</h2>
-    <p>{{ issue?.project }}, {{ issue?.type }}</p>
-  </section>
-  <section class="issue-body">
-    <h2>About this issue</h2>
-    <ul>
-      <li><strong>Priority:</strong> {{ issue?.priority }}</li>
-      <li><strong>Summary:</strong> {{ issue?.summary }}</li>
-      <li><strong>Description:</strong> {{ issue?.description }}</li>
-      <li><strong>Due Date:</strong> {{ issue?.dueDateTime }}</li>
-      <li><strong>Created:</strong> {{ issue?.createdAt }}</li>
-      <li>
+<mat-card>
+<mat-card-header>
+  <mat-card-title>{{ issue?.title }}</mat-card-title>
+  <mat-card-subtitle>{{ issue?.project }}, {{ issue?.type }}</mat-card-subtitle>
+</mat-card-header>
+  
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item><strong>Priority:</strong> {{ issue?.priority }}</mat-list-item>
+      <mat-list-item><strong>Summary:</strong> {{ issue?.summary }}</mat-list-item>
+      <mat-list-item><strong>Description:</strong> {{ issue?.description }}</mat-list-item>
+      <mat-list-item><strong>Due Date:</strong> {{ issue?.dueDateTime }}</mat-list-item>
+      <mat-list-item><strong>Created:</strong> {{ issue?.createdAt }}</mat-list-item>
+      <mat-list-item>
         <strong>Original Estimate Time:</strong> {{ issue?.originalEstimate }}
-      </li>
-      <li>
+      </mat-list-item>
+      <mat-list-item>
         <strong>Remaining Estimate Time:</strong> {{ issue?.remainingEstimate }}
-      </li>
-      <li><strong>Author:</strong> {{ issue?.authorId }}</li>
-      <li><strong>Assigned Users:</strong> {{ issue?.assigneeIds }}</li>
-      <li><strong>Comments:</strong> {{ issue?.commentIds }}</li>
-    </ul>
-  </section>
-</article>
+      </mat-list-item>
+      <mat-list-item><strong>Author:</strong> {{ issue?.authorId }}</mat-list-item>
+      <mat-list-item><strong>Assigned Users:</strong> {{ issue?.assigneeIds }}</mat-list-item>
+      <mat-list-item><strong>Comments:</strong> {{ issue?.commentIds }}</mat-list-item>
+    </mat-list>
+    </mat-card-content>
+  </mat-card>
