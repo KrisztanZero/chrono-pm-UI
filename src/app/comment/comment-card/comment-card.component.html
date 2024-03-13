@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ comment.summary }}</mat-card-title>
+    <mat-card-subtitle
+      >{{ comment.authorId }}, {{ comment.id }}</mat-card-subtitle
+    > </mat-card-header
+  ><br />
+  <mat-card-content>{{ comment.content }}</mat-card-content
+  ><br />
+  <mat-card-actions align="end" matTooltip="Detailed information">
+    <a
+      mat-stroked-button
+      [routerLink]="['/comment-details', comment.id]"
+      >Details</a
+    >
+  </mat-card-actions>
+</mat-card>
