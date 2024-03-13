@@ -4,17 +4,24 @@
     src="/assets/logo.png"
     alt="logo"
     aria-hidden="true"
-    [routerLink]="['/home']"
+    [routerLink]="['/']"
   />
   <span class="spacer"></span>
   <span class="app-name">Chrono PM</span>
   <span class="spacer"></span>
-  <button mat-icon-button [mat-menu-trigger-for]="menu"  aria-label="icon-button with menu icon">
+  <button
+    mat-icon-button
+    [mat-menu-trigger-for]="menu"
+    aria-label="icon-button with menu icon"
+  >
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-      <button mat-menu-item [routerLink]="['/home']">Home</button>
-      <button mat-menu-item [routerLink]="['/login']">Login</button>
-      <button mat-menu-item [routerLink]="['/register']">Registration</button>
+    <button mat-menu-item [routerLink]="['/']">Home</button>
+    <button mat-menu-item [routerLink]="['/login']">Login</button>
+    <button mat-menu-item [routerLink]="['/register']">Registration</button>
+    <button mat-menu-item [routerLink]="['/users']">Users</button>
+    <button mat-menu-item [routerLink]="['/issues']">Issues</button>
+    <button mat-menu-item [routerLink]="['/comments']">Comments</button>
   </mat-menu>
 </mat-toolbar>
