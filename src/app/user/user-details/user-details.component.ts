@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { ActivatedRoute } from '@angular/router';
-import { IUser } from '../../interface/auth.models';
+import { IUser } from '../../interface/user';
 import { UserService } from '../../service/user.service';
 
 @Component({

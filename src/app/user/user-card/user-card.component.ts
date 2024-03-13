@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterLink } from '@angular/router';
-import { IUser } from '../../interface/auth.models';
+import { IUser } from '../../interface/user';
 
 @Component({
   selector: 'app-user-card',

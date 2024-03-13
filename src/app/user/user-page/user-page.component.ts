@@ -7,7 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { IUser } from '../../interface/auth.models';
+import { IUser } from '../../interface/user';
 import { UserService } from '../../service/user.service';
 
 @Component({
