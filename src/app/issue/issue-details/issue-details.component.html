@@ -1,7 +1,7 @@
 <mat-card>
 <mat-card-header>
   <mat-card-title>{{ issue?.title }}</mat-card-title>
-  <mat-card-subtitle>{{ issue?.project }}, {{ issue?.type }}</mat-card-subtitle>
+  <mat-card-subtitle>{{ issue?.type }}</mat-card-subtitle>
 </mat-card-header>
   
   <mat-card-content>
@@ -18,8 +18,27 @@
         <strong>Remaining Estimate Time:</strong> {{ issue?.remainingEstimate }}
       </mat-list-item>
       <mat-list-item><strong>Author:</strong> {{ issue?.authorId }}</mat-list-item>
-      <mat-list-item><strong>Assigned Users:</strong> {{ issue?.assigneeIds }}</mat-list-item>
-      <mat-list-item><strong>Comments:</strong> {{ issue?.commentIds }}</mat-list-item>
+<mat-list-item
+        ><strong>Assignees:</strong>
+        <mat-form-field>
+          <mat-label>Assignee Id</mat-label>
+          <mat-select>
+            @for (assigneeId of issue?.assigneeIds; track assigneeId) {
+            <mat-option>{{ assigneeId }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </mat-list-item>      <mat-list-item
+        ><strong>Comments:</strong>
+        <mat-form-field>
+          <mat-label>Comment Id</mat-label>
+          <mat-select>
+            @for (commentId of issue?.commentIds; track commentId) {
+            <mat-option>{{ commentId }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </mat-list-item>
     </mat-list>
     </mat-card-content>
   </mat-card>

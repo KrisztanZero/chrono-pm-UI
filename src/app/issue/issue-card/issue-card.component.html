@@ -1,11 +1,11 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>{{ issue.title }}</mat-card-title>
+    <mat-card-title>Title: {{ issue.title }}</mat-card-title>
     <mat-card-subtitle
-      >{{ issue.project }}, {{ issue.type }}</mat-card-subtitle
+      >Type: {{ issue.type }}</mat-card-subtitle
     > </mat-card-header
   ><br />
-  <mat-card-content>{{ issue.createdAt }}</mat-card-content
+  <mat-card-content>Created: {{ issue.createdAt }}</mat-card-content
   ><br />
   <mat-card-actions align="end" matTooltip="Detailed information">
     <a

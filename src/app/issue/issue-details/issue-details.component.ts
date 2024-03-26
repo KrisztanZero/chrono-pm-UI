@@ -5,11 +5,18 @@ import { ActivatedRoute } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-issue-details',
   standalone: true,
-  imports: [MatButtonModule, MatCardModule, MatListModule],
+  imports: [
+    MatButtonModule,
+    MatCardModule,
+    MatListModule,
+    MatListModule,
+    MatSelectModule,
+  ],
   templateUrl: './issue-details.component.html',
   styleUrl: './issue-details.component.scss',
 })
