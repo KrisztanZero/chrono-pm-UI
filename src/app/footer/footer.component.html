@@ -1,0 +1,13 @@
+<mat-toolbar class="footer-toolbar">
+  <span>Version: {{ appDetails?.version }}</span>
+  <span class="spacer"></span
+  ><img
+    class="brand-logo"
+    src="/assets/logo.png"
+    alt="logo"
+    aria-hidden="true"
+    [routerLink]="['/']"
+  />
+  <span class="spacer"></span>
+  <span>{{ appDetails?.developers }}</span>
+</mat-toolbar>
