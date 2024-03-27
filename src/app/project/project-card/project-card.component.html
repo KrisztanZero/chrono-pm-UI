@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Project Name: {{ project.projectName }}</mat-card-title>
+    <mat-card-subtitle
+      >Summary: {{ project.summary }}</mat-card-subtitle
+    > </mat-card-header
+  ><br />
+  <mat-card-content>Created: {{ project.createdAt }}</mat-card-content
+  ><br />
+  <mat-card-actions align="end">
+    <a
+      matTooltip="Detailed information"
+      mat-stroked-button
+      [routerLink]="['/project-details', project.id]"
+      >Details</a
+    >
+  </mat-card-actions>
+</mat-card>

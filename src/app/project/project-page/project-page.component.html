@@ -1,0 +1,31 @@
+<div class="page">
+  <mat-form-field class="search-form">
+    <mat-label>Filter by project</mat-label>
+    <input matInput type="text" placeholder="Enter issue name" #filter />
+    <button
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="clearInput(filter)"
+      matTooltip="Reset fields"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    <button
+      matSuffix
+      mat-icon-button
+      type="button"
+      (click)="filterResults(filter.value)"
+      matTooltip="Search"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+<mat-grid-list cols="2" rowHeight="2:1">
+  @for (project of filteredProjects; track project.id) {
+  <mat-grid-tile>
+    <app-project-card [project]="project"></app-project-card>
+  </mat-grid-tile>
+  }
+</mat-grid-list>

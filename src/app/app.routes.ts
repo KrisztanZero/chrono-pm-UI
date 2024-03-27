@@ -8,6 +8,8 @@ import { CommentPageComponent } from './comment/comment-page/comment-page.compon
 import { CommentDetailsComponent } from './comment/comment-details/comment-details.component';
 import { UserPageComponent } from './user/user-page/user-page.component';
 import { UserDetailsComponent } from './user/user-details/user-details.component';
+import { ProjectDetailsComponent } from './project/project-details/project-details.component';
+import { ProjectPageComponent } from './project/project-page/project-page.component';
 
 export const routes: Routes = [
   {
@@ -24,6 +26,16 @@ export const routes: Routes = [
     path: 'user-details/:id',
     component: UserDetailsComponent,
     title: 'User details',
+  },
+  {
+    path: 'projects',
+    component: ProjectPageComponent,
+    title: 'Project page',
+  },
+  {
+    path: 'project-details/:id',
+    component:ProjectDetailsComponent,
+    title: 'Project details',
   },
   {
     path: 'issues',
