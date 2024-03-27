@@ -37,3 +37,20 @@ $chrono-pm-UI-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0rem; font-family: Lato, sans-serif; }
+
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.search-form {
+  width: 80vw;
+  margin: 1rem;
+}
