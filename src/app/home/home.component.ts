@@ -1,24 +1,23 @@
-import { Component } from '@angular/core';
-import { IssueCardComponent } from '../issue/issue-card/issue-card.component';
-import { RouterLink } from '@angular/router';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
+import { Component, inject } from '@angular/core';
+import { IAppDetails } from '../interface/appDetails';
+import { AppDetailsService } from '../service/app-details.service';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    IssueCardComponent,
-    RouterLink,
-    MatInputModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatButtonModule,
-  ],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  appDetails: IAppDetails | undefined;
+  appDetailsService: AppDetailsService = inject(AppDetailsService);
+
+  constructor() {
+    this.appDetailsService.getAppDetailsById("362919f6-2357-4c71-b917-f68fdb0da91d")
+      .then((appDetails) => {
+        this.appDetails = appDetails;
+      });
+  }
+}

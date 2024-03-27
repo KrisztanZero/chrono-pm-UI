@@ -1,12 +1,8 @@
 <div class="home">
   <div class="center-container">
-    <h2>Welcome to Chrono Project Management Service</h2>
-    <mat-form-field class="search-form">
-      <mat-label>Search projects</mat-label>
-      <input matInput type="text" placeholder="Project name" />
-      <button matSuffix mat-icon-button type="button" aria-label="Search">
-        <mat-icon>search</mat-icon>
-      </button>
-    </mat-form-field>
+    <h2>{{ appDetails?.welcomeMessage }}</h2>
+    <br />
+    <h3>{{ appDetails?.introduction }}</h3>
   </div>
 </div>
+
