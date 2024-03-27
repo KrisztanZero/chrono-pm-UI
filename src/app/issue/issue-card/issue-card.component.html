@@ -7,8 +7,9 @@
   ><br />
   <mat-card-content>Created: {{ issue.createdAt }}</mat-card-content
   ><br />
-  <mat-card-actions align="end" matTooltip="Detailed information">
+  <mat-card-actions align="end">
     <a
+      matTooltip="Detailed information"
       mat-stroked-button
       [routerLink]="['/issue-details', issue.id]"
       >Details</a

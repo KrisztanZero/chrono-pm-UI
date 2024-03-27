@@ -1,14 +1,13 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>Username: {{ user.username }}</mat-card-title>
-    <mat-card-subtitle
-      >Id: {{ user.id }}</mat-card-subtitle
-    > </mat-card-header
+    <mat-card-subtitle>Id: {{ user.id }}</mat-card-subtitle> </mat-card-header
   ><br />
   <mat-card-content>E-mail: {{ user.email }}</mat-card-content
   ><br />
-  <mat-card-actions align="end" matTooltip="Detailed information">
+  <mat-card-actions align="end">
     <a
+      matTooltip="Detailed information"
       mat-stroked-button
       [routerLink]="['/user-details', user.id]"
       >Details</a

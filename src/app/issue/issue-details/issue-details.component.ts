@@ -14,7 +14,6 @@ import { MatSelectModule } from '@angular/material/select';
     MatButtonModule,
     MatCardModule,
     MatListModule,
-    MatListModule,
     MatSelectModule,
   ],
   templateUrl: './issue-details.component.html',
